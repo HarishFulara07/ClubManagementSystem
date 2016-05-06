@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.BookEventController">
+   <children>
+      <Text layoutX="30.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Name:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="30.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organisers:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="30.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team size:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="BookEventName" layoutX="200.0" layoutY="73.0" prefHeight="35.0" prefWidth="300.0" promptText="What is the name of your event? ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="BookEventOrganisers" layoutX="200.0" layoutY="128.0" prefHeight="94.0" prefWidth="299.0" promptText="Who are the organisers of your event?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="30.0" layoutY="10.0" prefHeight="46.0" prefWidth="511.0" text="IIIT-Delhi Club Event Booking Form" textFill="#3fada8" underline="true">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="BookEventTeamSize" layoutX="200.0" layoutY="242.0" prefHeight="35.0" prefWidth="300.0" promptText="Team size allowed for the event?" />
+      <Text layoutX="30.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prize:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="BookEventPrize" layoutX="200.0" layoutY="355.0" prefHeight="94.0" prefWidth="299.0" promptText="Mention prize details of your event? What is the prize for the winner? What about runner-ups? Is there any consolation prize?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="bookEvent" layoutX="312.0" layoutY="472.0" mnemonicParsing="false" onAction="#bookEventAction" prefHeight="35.0" prefWidth="90.0" text="Book Event">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelEventBooking" layoutX="200.0" layoutY="472.0" mnemonicParsing="false" onAction="#cancelEventBookingAction" prefHeight="35.0" prefWidth="90.0" text="Cancel">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="29.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="BookEventBudget" layoutX="200.0" layoutY="299.0" prefHeight="35.0" prefWidth="300.0" promptText="What is the budget of your event?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

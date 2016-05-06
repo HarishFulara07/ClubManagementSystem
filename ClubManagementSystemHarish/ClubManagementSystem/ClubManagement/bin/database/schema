@@ -1,0 +1,183 @@
+<------ DATABASE SCHEMA ------------->
+
+1.	club_info (club_name, discipline, description)
+	//club_name is the primary key
+
+2.	user_info (first_name, last_name, sex, profession, roll_number, email)
+	//email is the primary key
+
+3.	member_status (status)
+	// status is PRIMARY KEY
+	// There will be only three values possible --> NON-MEMBER, MEMBER, ADMIN
+
+4.	club_member_info (club_name, status, email)
+	//(club_name, email) is the primary key
+	//status is the foreign key referencing member_status (status)
+
+5.	login_info (email, password)
+	//email is the primary key
+
+6.	event_details (event_id, event_name, event_start_time, event_end_time, event_venue, description, organising_club, organisers, team_size, budget, prize)
+	//event_id is the primary key
+	//organising_club is the foreign key referencing club_info (club_name)
+
+<------ CREATE DATABASE ------------>
+
+create database club_management_system;
+
+<------ SQL TABLES -------------->
+
+create table club_info (
+club_name varchar(100),
+discipline varchar(50),
+description varchar(1000),
+primary key (club_name)
+);
+
+create table user_info (
+first_name varchar(50),
+last_name varchar(50),
+sex varchar(10),
+profession varchar(50),
+roll_number int,
+email varchar(255),
+primary key(email)
+);
+
+create table member_status (
+status varchar(50),
+primary key (status)
+);
+
+create table club_member_info (
+club_name varchar(100),
+status varchar(50),
+email varchar(255),
+primary key (club_name, email),
+foreign key (club_name) references club_info (club_name),
+foreign key (status) references member_status (status)
+);
+
+create table login_info (
+email varchar(255),
+password varchar(50),
+primary key (email)
+);
+
+create table event_details (
+event_id int,
+event_name varchar(50),
+event_start_time timestamp,
+event_end_time timestamp,
+event_venue varchar(50),
+description varchar(1000),
+organising_club varchar(100),
+organisers varchar(1000),
+team_size int,
+budget int,
+prize varchar(1000),
+primary key (event_id),
+foreign key (organising_club) references club_info (club_name)
+);
+
+<------ CLUB RECORDS ------->
+
+insert into club_info (club_name, discipline, description) values ("Astronuts", "Astronomy", "Astronuts, the astronomy club of IIIT-Delhi was started in October 2012 to provide a learning platform to students passionate about the skies above. By conducting night observations, organising quizzing competitions and group learning sessions, we seek to unravel the mysteries of the night!");
+insert into club_info (club_name, discipline, description) values ("Audio Bytes", "Music", "AudioBytes, the music club has been started with the goal of encouraging sprouting music talents in the institute and give them a chance to thrive and showcase their skills.");
+insert into club_info (club_name, discipline, description) values ("Byld", "Software Development", "Byld is IIIT-D's software dev club. Byld exists to  foster a community  of individuals at IIIT-D who solve problems through the innovative use of technology.");
+insert into club_info (club_name, discipline, description) values ("Dramatis Personae", "Dramatics", "The Dramatics society of IIIT-D believes that there is an actor within everyone. All we need to do is to bring the actor outside. This is made possible not only by people who enact a script, but also the people who work equally hard behind the scenes. Dramatis Personae is a combination of people belonging to both categories. Inspite of being different each individual here has two things in common: craziness and the desire to have fun.");
+insert into club_info (club_name, discipline, description) values ("Eco Club", "Nature + Environment club", "We are a bunch of people who want to save our nature and environment");
+insert into club_info (club_name, discipline, description) values ("Electroholics", "Electronics", "The main aim of this club is to bring the students on common bench and let them face the difficulties of circuit design and hardware debugging. Also, to provide a forum for electronics students to meet, learn and reciprocate their ideas, skills and experiences.");
+insert into club_info (club_name, discipline, description) values ("Foobar", "Programming", "FooBar aims to promote programming as a culture among students by conducting weekly sessions (CodeClasses and contests). It also aims to improve performance of IIIT-D students in external contests.");
+insert into club_info (club_name, discipline, description) values ("Game Craft", "Game Development", "Game Development Club of IIIT Delhi, Established to make students appricate the technology present infield of 3D modelling, Animation and Game Development. Students will develop models, animation and games for both mobile and PC");
+insert into club_info (club_name, discipline, description) values ("Ink", "Design", "The club aims to develop a design sense in students in IIIT Delhi. We will be working on  Institute's design taking in mind the design identity of the institute.");
+insert into club_info (club_name, discipline, description) values ("Madtoes", "Dance", "We are a bunch of people who love and are passionate about dance. We have people who have learnt dance as well as those who are new to the form. The club is a gathering for us to show our love and passion that we share for the form.");
+insert into club_info (club_name, discipline, description) values ("PhiloSoc", "Philosophical Society of IIIT-Delhi", "We're a group of students, professors and staffers at IIIT Delhi who want to explore our various trains of thought (from the ordinary to the absolutely whacked out) through the shared platform that PhiloSoc provides. Our primary objective is to develop a culture of deeper inquiry into subjects. We organize weekly meetings under the banner of The Lunchbox Philosophers - an open-for-all, Socratically styled group for meandering discussions of questions big and small. You are welcome to join us (as well as leave us!) whenever you please. See you around!");
+insert into club_info (club_name, discipline, description) values ("Prodigious Painters", "Painting", "Prodigious Painters, the arts club of IIIT-Delhi aims at indulging the busy technical minds of our institute in some creativity and imagination. The club is open to one and all with art as the common interest. We conduct weekly art sessions on themes like still life, sketches, collage work, craft work, etc. Also, we plan on taking members to various art exhibitions in Delhi.");
+insert into club_info (club_name, discipline, description) values ("Robotics Club", "Robotics", "IIITD's robotics club is based on the philosophy of Together Everyone Achieves More often abbreviated as TEAM.");
+insert into club_info (club_name, discipline, description) values ("Tasveer", "Photography", "The society aims to develop photographic knowledge and skills by sharing information and experience and help members appreciate photography as a form of art and science.");
+insert into club_info (club_name, discipline, description) values ("Trivialis", "Quizzing", "In Latin, ‘trivialis’ appertained to the crossroads where three roads met, which came to be known in towns as the ‘trivium’, or public place. This completely goes with our Club. We are completely open to all and believe that to every question, there are 3 possible answers-The Right Answer, The Wrong Answer and The Funny Answer. And these answers are guarded by our version of Trivia.");
+insert into club_info (club_name, discipline, description) values ("The 65th Square", "Chess", "The 65th Square is IIIT-Delhi’s Chess Club. It is for people who are interested in and/or enjoy playing chess. The club aims at - Organising intra and inter college tournaments, forming a IIIT-Delhi chess team and having regular chess games, sessions to analyse them. For fun we even play Blitz, Anti-chess and Supply.");
+insert into club_info (club_name, discipline, description) values ("Voix de Literati", "Public Speaking, Reading and Writing", "We are a house of people enthusiastic about everything literary - be it books, spoken arts, debating or discussions in general on topics ranging from international affairs to everyday issues, from books, novellas and poets to the linguistic underpinnings of English and related languages.");
+
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Harish","Fulara","Male","Student",2014143,"harish@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Gursimran","Singh","Male","Student",2014041,"gursimran@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Vikas","Tyagi","Male","Student",2014171,"vikas@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Hirak","Sharma","Male","Student",2014048,"hirak@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Mohd","Shoaib","Male","Student",2014148,"shoaib@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Akash","Gupta","Male","Student",2014144,"akash@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Manish","Singh","Male","Student",2014146,"manish@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Sonakshi","Sinha","Female","Student",2014106,"sonakshi@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Sagar","Chauhan","Male","Student",2014090,"sagar@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Mandeep","Singh","Male","Student",2014145,"mandeep@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Akshit","Singh","Male","Student",2014131,"akshit@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Deepanshu","Gehlot","Male","Student",2014154,"deepanshu@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Nayeem","Khan","Male","Student",2014150,"nayeem@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Vasu","Verma","Male","Student",2014100,"vasu@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Himanshu","Sagar","Male","Student",2014096,"himanshu@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Yash","Sherry","Male","Student",2014196,"yash@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Rohan","Verma","Male","Student",2014026,"rohan@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Dheeraj","Kapoor","Male","Student",2014116,"dheeraj@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Akshat","Sinha","Male","Student",2014139,"akshat@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, roll_number, email) values ("Ashutosh","Nandan","Male","Student",2014121,"ashutosh@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, email) values ("Alex", "Fell", "Male","Faculty","alex@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, email) values ("Sandeep", "Aine", "Male","Faculty","sandeep@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, email) values ("Rajiv", "Raman", "Male","Faculty","rajiv@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, email) values ("Pushpendra", "Singh", "Male","Faculty","pushpendra@iiitd.ac.in");
+insert into user_info (first_name, last_name, sex, profession, email) values ("Vinayak", "Naik", "Male","Faculty","vinayak@iiitd.ac.in"); 
+
+insert into member_status (status) values ("MEMBER");
+insert into member_status (status) values ("NON-MEMBER");
+insert into member_status (status) values ("ADMIN");
+
+insert into club_member_info (club_name, status, email) values ("Foobar","ADMIN","gursimran@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","ADMIN","harish@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Electroholics","NON-MEMBER","vikas@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","MEMBER","hirak@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Electroholics","ADMIN","shoaib@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Electroholics","ADMIN","akash@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Electroholics","MEMBER","manish@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","ADMIN","sonakshi@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","ADMIN","sagar@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Electroholics","MEMBER","mandeep@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Electroholics","MEMBER","akshit@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","MEMBER","deepanshu@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","MEMBER","nayeem@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","MEMBER","vasu@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","MEMBER","himanshu@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Electroholics","MEMBER","yash@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","MEMBER","rohan@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Electroholics","MEMBER","akshat@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","MEMBER","ashutosh@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","MEMBER","dheeraj@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Electroholics","NON-MEMBER","alex@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","NON-MEMBER","sandeep@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","NON-MEMBER","rajiv@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","NON-MEMBER","vinayak@iiitd.ac.in");
+insert into club_member_info (club_name, status, email) values ("Foobar","NON-MEMBER","pushpendra@iiitd.ac.in");
+
+insert into login_info (email, password) values ("gursimran@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("shoiab@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("harish@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("vikas@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("hirak@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("akash@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("manish@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("sonakshi@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("sagar@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("mandeep@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("akshit@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("deepanshu@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("nayeem@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("vasu@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("himanshu@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("akshat@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("ashutosh@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("dheeraj@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("rohan@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("yash@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("alex@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("rajiv@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("sandeep@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("vinayak@iiitd.ac.in", SHA1("Demo@147258369"));
+insert into login_info (email, password) values ("pushpendra@iiitd.ac.in", SHA1("Demo@147258369"));

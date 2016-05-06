@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="620.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AdminRegistrationFormController">
+   <children>
+      <Label layoutX="42.0" layoutY="20.0" text="Admin Registration Form" textFill="#0f08d7" underline="true">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="85.0" text="First Name:" />
+      <Label layoutX="41.0" layoutY="185.0" text="Sex:" />
+      <Label layoutX="41.0" layoutY="235.0" text="Profession:" />
+      <Label layoutX="47.0" layoutY="266.0" />
+      <TextField fx:id="adminRegFirstName" layoutX="131.0" layoutY="80.0" prefHeight="35.0" prefWidth="298.0" promptText="Enter your first name" />
+      <RadioButton fx:id="adminRegMale" layoutX="131.0" layoutY="185.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="adminRegSex" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="adminRegFemale" layoutX="221.0" layoutY="185.0" mnemonicParsing="false" text="Female">
+         <toggleGroup>
+            <ToggleGroup fx:id="adminRegSex" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="adminRegStudent" layoutX="221.0" layoutY="235.0" mnemonicParsing="false" text="Student">
+         <toggleGroup>
+            <ToggleGroup fx:id="adminRegPro" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="adminRegFaculty" layoutX="131.0" layoutY="235.0" mnemonicParsing="false" text="Faculty">
+         <toggleGroup>
+            <ToggleGroup fx:id="adminRegPro" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="adminRegOther" layoutX="320.0" layoutY="235.0" mnemonicParsing="false" text="Other" toggleGroup="$adminRegPro" />
+      <Button fx:id="adminRegSubmit" layoutX="131.0" layoutY="535.0" mnemonicParsing="false" onAction="#adminRegSubmitAction" prefHeight="35.0" prefWidth="54.0" text="Submit" />
+      <Button fx:id="adminRegBack" layoutX="224.0" layoutY="535.0" mnemonicParsing="false" onAction="#homeScreenFromAdminReg" prefHeight="35.0" prefWidth="129.0" text="Back To Home Page" />
+      <TextField fx:id="adminRegLastName" layoutX="131.0" layoutY="130.0" prefHeight="35.0" prefWidth="298.0" promptText="Enter your last name" />
+      <Label layoutX="41.0" layoutY="135.0" text="Last Name:" />
+      <TextField fx:id="adminRegEmail" layoutX="131.0" layoutY="380.0" prefHeight="35.0" prefWidth="298.0" promptText="Enter your IIIT-D email" />
+      <Label layoutX="41.0" layoutY="385.0" text="Email:" />
+      <Label layoutX="41.0" layoutY="285.0" text="Roll Number:" />
+      <TextField fx:id="adminRegRollNum" layoutX="131.0" layoutY="280.0" prefHeight="35.0" prefWidth="298.0" promptText="Enter your IIIT-D roll number (if you are a student)" />
+      <Label layoutX="41.0" layoutY="335.0" text="Club:" />
+      <PasswordField fx:id="adminRegPassword" layoutX="131.0" layoutY="430.0" prefHeight="35.0" prefWidth="298.0" promptText="Enter a password for your account" />
+      <PasswordField fx:id="adminRegConfirmPassword" layoutX="131.0" layoutY="480.0" prefHeight="35.0" prefWidth="298.0" promptText="Confirm your password" />
+      <Label layoutX="41.0" layoutY="435.0" text="Password:" />
+      <ComboBox fx:id="adminRegClub" layoutX="131.0" layoutY="329.0" prefHeight="35.0" prefWidth="298.0" promptText="Which club's admin are you?" />
+   </children>
+</AnchorPane>

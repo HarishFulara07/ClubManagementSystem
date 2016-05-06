@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.controller.AdminShowMemberController">
+   <children>
+      <Label layoutX="55.0" layoutY="30.0" prefHeight="46.0" prefWidth="511.0" text="IIIT-Delhi Club Management System" textFill="#3fada8" underline="true">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="showMemberBack" layoutX="55.0" layoutY="97.0" mnemonicParsing="false" onAction="#showMemberBackAction" prefHeight="35.0" prefWidth="80.0" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text fill="#c20b0b" layoutX="55.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Information" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="55.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#c20b0b" layoutX="55.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club Membership Information" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#c20b0b" layoutX="55.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="55.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="57.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="54.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profession:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="54.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="55.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll Number:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="54.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="showMemberName" layoutX="175.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="showMemberRollNum" layoutX="175.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="showMemberSex" layoutX="175.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="showMemberProfession" layoutX="175.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="showMemberEmail" layoutX="175.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="showMemberClub" layoutX="175.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="showMemberStatus" layoutX="175.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

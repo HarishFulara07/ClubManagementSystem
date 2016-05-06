@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.HomeScreenController">
+   <children>
+      <Label layoutX="21.0" layoutY="20.0" prefHeight="46.0" prefWidth="524.0" text="IIIT-Delhi Club Management System" textFill="#3fada8" underline="true">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="adminLogin" layoutX="150.0" layoutY="131.0" mnemonicParsing="false" onAction="#adminLoginScreen" prefHeight="40.0" prefWidth="250.0" text="Club Admin" />
+      <Button fx:id="othersLogin" layoutX="150.0" layoutY="201.0" mnemonicParsing="false" onAction="#othersLoginScreen" prefHeight="40.0" prefWidth="250.0" text="Others" />
+      <Text layoutX="21.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" underline="true">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration" underline="true">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="adminRegistration" layoutX="150.0" layoutY="329.0" mnemonicParsing="false" onAction="#adminRegistrationScreen" prefHeight="40.0" prefWidth="250.0" text="Club Admin" />
+      <Button fx:id="othersRegistration" layoutX="150.0" layoutY="399.0" mnemonicParsing="false" onAction="#othersRegistrationScreen" prefHeight="40.0" prefWidth="250.0" text="Others" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.OthersLoginScreenController">
+   <children>
+      <TextField fx:id="othersEmail" layoutX="131.0" layoutY="156.0" prefHeight="35.0" prefWidth="300.0" promptText="Enter your email">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="21.0" layoutY="98.0" text="LogIn" underline="true">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="othersLoginSubmit" layoutX="131.0" layoutY="274.0" mnemonicParsing="false" onAction="#othersLoginSubmitAction" prefHeight="35.0" prefWidth="80.0" text="Submit">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Text fx:id="othersLoginError" fill="#c90d0d" layoutX="131.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Email or Password" visible="false" wrappingWidth="243.3046875">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="othersLoginBack" layoutX="21.0" layoutY="442.0" mnemonicParsing="false" onAction="#homeScreenFromOthers" prefHeight="35.0" prefWidth="150.0" text="Back To Home Page">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <PasswordField fx:id="othersPassword" layoutX="131.0" layoutY="215.0" prefHeight="35.0" prefWidth="300.0" promptText="Password">
+         <font>
+            <Font size="14.0" />
+         </font></PasswordField>
+      <Label layoutX="21.0" layoutY="20.0" prefHeight="46.0" prefWidth="524.0" text="IIIT-Delhi Club Management System" textFill="#3fada8" underline="true">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Text fx:id="errorDetails" layoutX="131.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

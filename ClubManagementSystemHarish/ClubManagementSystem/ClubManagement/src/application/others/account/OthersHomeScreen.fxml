@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.OthersHomeScreenController">
+   <children>
+      <TabPane layoutY="130.0" prefHeight="470.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Home">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="444.0" prefWidth="400.0">
+                     <children>
+                        <Text layoutX="45.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="45.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="45.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll Number:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="45.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="45.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profession:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="45.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="45.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#c20b0b" layoutX="45.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Information" underline="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#c20b0b" layoutX="45.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information" underline="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#c20b0b" layoutX="45.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club Membership Information" underline="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="othersAccountName" layoutX="175.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="othersAccountRollNum" layoutX="175.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="othersAccountProfession" layoutX="175.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="othersAccountSex" layoutX="175.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="othersAccountStatus" layoutX="175.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="othersAccountClub" layoutX="175.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="othersAccountEmail" layoutX="175.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Club Information">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="412.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="30.0" layoutY="50.0" text="Name of the club:">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Button fx:id="othersClubInfoSubmit" layoutX="230.0" layoutY="230.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" text="Submit">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Button>
+                        <Label layoutX="30.0" layoutY="100.0" text="Type of information:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="othersCompleteClubInfo" layoutX="230.0" layoutY="100.0" mnemonicParsing="false" text="Complete club information">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="othersTypeOfInformation" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="othersClubAdminsInfo" layoutX="230.0" layoutY="140.0" mnemonicParsing="false" text="Club Admins information only" toggleGroup="$othersTypeOfInformation">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="othersClubMembersInfo" layoutX="230.0" layoutY="180.0" mnemonicParsing="false" text="Club members information only" toggleGroup="$othersTypeOfInformation">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <ComboBox fx:id="othersClubInfoName" layoutX="230.0" layoutY="43.0" prefHeight="35.0" prefWidth="300.0" promptText="Which club's info are you looking for?" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Member Information">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="412.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="30.0" layoutY="50.0" text="Name of the member:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="othersMemberInfoName" layoutX="230.0" layoutY="45.0" prefHeight="35.0" prefWidth="300.0" promptText="Enter name of the member">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="othersMemberInfoSubmit" layoutX="230.0" layoutY="360.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" text="Submit">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Line endX="124.0" layoutX="130.0" layoutY="120.0" startX="-100.0" />
+                        <Line endX="96.0" layoutX="430.0" layoutY="120.0" startX="-124.0" />
+                        <Text layoutX="268.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR" wrappingWidth="32.3369140625">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="othersMemberInfoRollNum" layoutX="230.0" layoutY="170.0" prefHeight="35.0" prefWidth="300.0" promptText="Enter roll number of the member">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="30.0" layoutY="175.0" text="Roll number of the member:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="124.0" layoutX="130.0" layoutY="245.0" startX="-100.0" />
+                        <Line endX="96.0" layoutX="430.0" layoutY="245.0" startX="-124.0" />
+                        <Text layoutX="264.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR" wrappingWidth="32.3369140625">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="30.0" layoutY="290.0" text="Email of the member:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="othersMemberInfoEmail" layoutX="230.0" layoutY="285.0" prefHeight="35.0" prefWidth="300.0" promptText="Enter email of the member">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Event Information">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="30.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <DatePicker fx:id="othersEventInfoFrom" layoutX="200.0" layoutY="30.0" prefHeight="35.0" prefWidth="300.0" />
+                        <DatePicker fx:id="othersEventInfoTo" layoutX="200.0" layoutY="100.0" prefHeight="35.0" prefWidth="300.0" />
+                        <Text layoutX="30.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organising Club:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="othersEventInfoClub" layoutX="200.0" layoutY="170.0" prefHeight="35.0" prefWidth="300.0" promptText="-----------------------------------------------------" />
+                        <Button fx:id="othersEventInfoSubmit" layoutX="200.0" layoutY="242.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" text="Submit">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="othersLogout" layoutX="473.0" layoutY="77.0" mnemonicParsing="false" onAction="#othersLogoutAction" prefHeight="35.0" prefWidth="80.0" text="Logout">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="45.0" layoutY="20.0" prefHeight="46.0" prefWidth="511.0" text="IIIT-Delhi Club Management System" textFill="#3fada8" underline="true">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

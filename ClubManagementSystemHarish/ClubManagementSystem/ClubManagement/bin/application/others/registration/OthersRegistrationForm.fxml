@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.OthersRegistrationFormController">
+   <children>
+      <Label layoutX="42.0" layoutY="20.0" text="Registration Form" textFill="#0f08d7" underline="true">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="85.0" text="First Name:" />
+      <Label layoutX="41.0" layoutY="185.0" text="Sex:" />
+      <Label layoutX="41.0" layoutY="235.0" text="Profession:" />
+      <Label layoutX="47.0" layoutY="266.0" />
+      <TextField fx:id="othersRegFirstName" layoutX="131.0" layoutY="80.0" prefHeight="35.0" prefWidth="298.0" promptText="Enter your first name" />
+      <RadioButton fx:id="othersRegMale" layoutX="131.0" layoutY="185.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="othersRegSex" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="othersRegFemale" layoutX="221.0" layoutY="185.0" mnemonicParsing="false" text="Female" toggleGroup="$othersRegSex" />
+      <RadioButton fx:id="othersRegStudent" layoutX="221.0" layoutY="235.0" mnemonicParsing="false" text="Student">
+         <toggleGroup>
+            <ToggleGroup fx:id="othersRegPro" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="othersRegFaculty" layoutX="131.0" layoutY="235.0" mnemonicParsing="false" text="Faculty" toggleGroup="$othersRegPro" />
+      <RadioButton fx:id="othersRegOther" layoutX="320.0" layoutY="235.0" mnemonicParsing="false" text="Other" toggleGroup="$othersRegPro" />
+      <Button fx:id="othersRegSubmit" layoutX="131.0" layoutY="485.0" mnemonicParsing="false" onAction="#othersRegSubmitAction" prefHeight="35.0" prefWidth="54.0" text="Submit" />
+      <Button fx:id="othersRegBack" layoutX="224.0" layoutY="485.0" mnemonicParsing="false" onAction="#homeScreenFromOthersReg" prefHeight="35.0" prefWidth="129.0" text="Back To Home Page" />
+      <TextField fx:id="othersRegLastName" layoutX="131.0" layoutY="130.0" prefHeight="35.0" prefWidth="298.0" promptText="Enter your last name" />
+      <Label layoutX="41.0" layoutY="135.0" text="Last Name:" />
+      <TextField fx:id="othersRegEmail" layoutX="131.0" layoutY="330.0" prefHeight="35.0" prefWidth="298.0" promptText="Enter your IIIT-D email" />
+      <Label layoutX="41.0" layoutY="335.0" text="Email:" />
+      <Label layoutX="41.0" layoutY="285.0" text="Roll Number:" />
+      <TextField fx:id="othersRegRollNum" layoutX="131.0" layoutY="280.0" prefHeight="35.0" prefWidth="298.0" promptText="Enter your IIIT-D roll number (if you are a student)" />
+      <PasswordField fx:id="othersRegPassword" layoutX="131.0" layoutY="380.0" prefHeight="35.0" prefWidth="298.0" promptText="Enter a password for your account" />
+      <PasswordField fx:id="othersRegConfirmPassword" layoutX="131.0" layoutY="430.0" prefHeight="35.0" prefWidth="298.0" promptText="Confirm your password" />
+      <Label layoutX="41.0" layoutY="385.0" text="Password:" />
+   </children>
+</AnchorPane>
