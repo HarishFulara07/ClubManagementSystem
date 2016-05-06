@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.others.account.Club_Info_Table_Controller">
+	<children>
+		<ScrollPane layoutY="60.0" prefViewportHeight="740.0"
+			prefViewportWidth="1000.0">
+			<content>
+				<TableView fx:id="table" layoutX="400.0" layoutY="60.0"
+					prefHeight="740.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0"
+					AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+					AnchorPane.topAnchor="60.0">
+					<columns>
+						<TableColumn fx:id="club_name" editable="false"
+							prefWidth="111.0" sortable="false" text="club_name" />
+						<TableColumn fx:id="discipline" editable="false"
+							prefWidth="111.0" sortable="false" text="discipline" />
+						<TableColumn fx:id="description" editable="false"
+							prefWidth="111.0" sortable="false" text="description" />
+						<TableColumn fx:id="email" editable="false" prefWidth="111.0"
+							sortable="false" text="email" />
+						<TableColumn fx:id="first_name" editable="false"
+							prefWidth="111.0" sortable="false" text="first_name" />
+						<TableColumn fx:id="last_name" editable="false"
+							prefWidth="111.0" sortable="false" text="last_name" />
+						<TableColumn fx:id="sex" editable="false" prefWidth="111.0"
+							sortable="false" text="sex" />
+						<TableColumn fx:id="profession" editable="false"
+							prefWidth="111.0" sortable="false" text="profession" />
+						<TableColumn fx:id="roll_number" editable="false"
+							prefWidth="112.0" text="roll_number" />
+					</columns>
+				</TableView>
+			</content>
+		</ScrollPane>
+		<Text layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0"
+			text="CLUB INFORMATION" textAlignment="CENTER" wrappingWidth="1000.0">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Text>
+		<Button fx:id="backButton" layoutX="36.0" layoutY="16.0"
+			mnemonicParsing="false" onAction="#onBackButton" text="Back to Other's Panel" />
+	</children>
+</AnchorPane>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.others.account.Others_Home_Screen_Controller">
+	<children>
+		<TabPane layoutY="130.0" prefHeight="470.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="Home">
+					<content>
+						<ScrollPane prefViewportHeight="431.0" prefViewportWidth="600.0">
+							<content>
+								<AnchorPane prefHeight="400.0" prefWidth="600.0">
+									<children>
+										<Text layoutX="45.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text layoutX="45.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text layoutX="45.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll Number:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text layoutX="45.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text layoutX="45.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profession:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text layoutX="45.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text layoutX="45.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text fill="#c20b0b" layoutX="45.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Information" underline="true">
+											<font>
+												<Font name="System Bold" size="20.0" />
+											</font>
+										</Text>
+										<Text fill="#c20b0b" layoutX="45.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information" underline="true">
+											<font>
+												<Font name="System Bold" size="20.0" />
+											</font>
+										</Text>
+										<Text fill="#c20b0b" layoutX="45.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club Membership Information" underline="true">
+											<font>
+												<Font name="System Bold" size="20.0" />
+											</font>
+										</Text>
+										<Text fx:id="othersAccount_Name" layoutX="175.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME HERE" wrappingWidth="330.87109375">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text fx:id="othersAccount_RollNum" layoutX="175.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ROLL NUMBER HERE" wrappingWidth="330.3994140625">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text fx:id="othersAccount_Profession" layoutX="175.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFESSION HERE" wrappingWidth="330.6279296875">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text fx:id="othersAccount_Sex" layoutX="175.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEX HERE" wrappingWidth="330.08984375">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text fx:id="othersAccount_Status" layoutX="175.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STATUS HERE" wrappingWidth="330.505859375">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text fx:id="othersAccount_Club" layoutX="175.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLUBS HERE" wrappingWidth="330.6513671875">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text fx:id="othersAccount_Email" layoutX="175.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMAIL HERE" wrappingWidth="330.3115234375">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+									</children>
+								</AnchorPane>
+							</content>
+						</ScrollPane>
+					</content>
+				</Tab>
+				<Tab text="Club Information">
+					<content>
+						<ScrollPane prefViewportHeight="431.0" prefViewportWidth="600.0">
+							<content>
+								<AnchorPane>
+									<children>
+										<Label layoutX="30.0" layoutY="50.0" text="Name of the club:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Label>
+										<Button fx:id="othersClubInfo_Submit" layoutX="230.0" layoutY="230.0" mnemonicParsing="false" onAction="#clubSubmit" text="Submit">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Button>
+										<Label layoutX="30.0" layoutY="100.0" text="Type of information:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Label>
+										<RadioButton fx:id="othersClubInfo_Complete" layoutX="230.0" layoutY="100.0" mnemonicParsing="false" text="Complete club information">
+											<font>
+												<Font size="14.0" />
+											</font>
+											<toggleGroup>
+												<ToggleGroup fx:id="othersTypeOfInformation" />
+											</toggleGroup>
+										</RadioButton>
+										<RadioButton fx:id="othersClubInfo_Admins" layoutX="230.0" layoutY="140.0" mnemonicParsing="false" text="Club Admins information only" toggleGroup="$othersTypeOfInformation">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</RadioButton>
+										<RadioButton fx:id="othersClubInfo_Members" layoutX="230.0" layoutY="180.0" mnemonicParsing="false" text="Club members information only" toggleGroup="$othersTypeOfInformation">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</RadioButton>
+										<Text fx:id="clubError" fill="#f80000" layoutX="230.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Input" visible="false">
+											<font>
+												<Font name="System Bold" size="15.0" />
+											</font>
+										</Text>
+										<Text fx:id="clubErrorDetails" layoutX="230.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" wrappingWidth="319.0" />
+                              <ComboBox fx:id="othersClubInfo_Name" layoutX="230.0" layoutY="45.0" prefHeight="31.0" prefWidth="252.0" promptText="Choose Club" />
+									</children>
+								</AnchorPane>
+							</content>
+						</ScrollPane>
+					</content>
+				</Tab>
+				<Tab text="Member Information">
+					<content>
+						<ScrollPane prefViewportHeight="431.0" prefViewportWidth="600.0">
+							<content>
+								<AnchorPane prefHeight="400.0" prefWidth="600.0">
+									<children>
+										<Label layoutX="30.0" layoutY="50.0" text="Name of the member:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Label>
+										<TextField fx:id="othersMemberInfo_Name" layoutX="230.0" layoutY="45.0" prefHeight="35.0" prefWidth="300.0" promptText="Enter name of the member">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</TextField>
+										<Button fx:id="othersMemberInfo_Submit" layoutX="230.0" layoutY="245.0" mnemonicParsing="false" onAction="#memberSubmit" prefHeight="35.0" prefWidth="80.0" text="Submit">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Button>
+										<Line endX="124.0" layoutX="130.0" layoutY="120.0" startX="-100.0" />
+										<Line endX="96.0" layoutX="430.0" layoutY="120.0" startX="-124.0" />
+										<Text layoutX="268.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR" wrappingWidth="32.3369140625">
+											<font>
+												<Font name="System Bold" size="18.0" />
+											</font>
+										</Text>
+										<TextField fx:id="othersMemberInfo_RollNum" layoutX="230.0" layoutY="170.0" prefHeight="35.0" prefWidth="300.0" promptText="Enter roll number of the member">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</TextField>
+										<Label layoutX="30.0" layoutY="175.0" text="Roll number of the member:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Label>
+										<Text fx:id="memberError" fill="#f80606" layoutX="230.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Input" visible="false">
+											<font>
+												<Font name="System Bold" size="15.0" />
+											</font>
+										</Text>
+										<Text fx:id="memberErrorDetails" layoutX="230.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" wrappingWidth="313.0" />
+									</children>
+								</AnchorPane>
+							</content>
+						</ScrollPane>
+					</content>
+				</Tab>
+				<Tab text="Event Information">
+					<content>
+						<ScrollPane prefViewportHeight="431.0" prefViewportWidth="600.0">
+							<content>
+								<AnchorPane prefHeight="400.0" prefWidth="600.0">
+									<children>
+										<Text layoutX="30.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<Text layoutX="30.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<DatePicker fx:id="othersEventInfo_From" layoutX="200.0" layoutY="30.0" prefHeight="35.0" prefWidth="300.0" />
+										<DatePicker fx:id="othersEventInfo_To" layoutX="200.0" layoutY="100.0" prefHeight="35.0" prefWidth="300.0" />
+										<Text layoutX="30.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organising Club:">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Text>
+										<ComboBox fx:id="othersEventInfo_Club" layoutX="200.0" layoutY="170.0" prefHeight="35.0" prefWidth="300.0" promptText="-----------------------------------------------------" />
+										<Button fx:id="othersEventInfo_Submit" layoutX="200.0" layoutY="242.0" mnemonicParsing="false" onAction="#eventSubmit" prefHeight="35.0" prefWidth="80.0" text="Submit">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Button>
+										<Text fx:id="eventError" fill="RED" layoutX="200.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Input" visible="false">
+											<font>
+												<Font name="System Bold" size="15.0" />
+											</font>
+										</Text>
+										<Text fx:id="eventErrorDetails" layoutX="200.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" wrappingWidth="335.0" />
+									</children>
+								</AnchorPane>
+							</content>
+						</ScrollPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+		<Button fx:id="othersLogout" layoutX="473.0" layoutY="77.0" mnemonicParsing="false" onAction="#othersLogoutAction" prefHeight="35.0" prefWidth="80.0" text="Logout">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Button>
+		<Label layoutX="45.0" layoutY="20.0" prefHeight="46.0" prefWidth="511.0" text="IIIT-Delhi Club Management System" textFill="#3fada8" underline="true">
+			<font>
+				<Font name="Arial Bold" size="30.0" />
+			</font>
+		</Label>
+	</children>
+</AnchorPane>
