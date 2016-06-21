@@ -1,5 +1,5 @@
 # ClubManagementSystem
-Java App for Club Management System for IIIT-Delhi
+This is a Java app for managing clubs in IIIT-Delhi
 
 
 By-
